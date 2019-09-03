@@ -1,28 +1,3 @@
-# json = []
-# @contacts.each do |contact|
-#   contact_hash = {
-#     id: contact.id,
-#     first_name: contact.first_name,
-#     last_name: contact.last_name,
-#     email: contact.email,
-#     phone_number: contact.phone_number
-#   }
-#   json << contact_hash
-# end
-
-# json
-
-# @contacts
-
 @contacts.map do |contact|
-  {
-    id: contact.id,
-    first_name: contact.first_name,
-    last_name: contact.last_name,
-    email: contact.email,
-    phone_number: contact.phone_number,
-    formatted: {
-      japan_phone_number: contact.japan_phone_number
-    }
-  }
+  render partial: "contact.json.jb", locals: { contact: contact }
 end
