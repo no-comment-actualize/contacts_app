@@ -9,6 +9,7 @@
   bio: contact.bio,
   latitdue: contact.latitude,
   longitude: contact.longitude,
+  groups: contact.group_names,
   formatted: {
     updated_at: contact.friendly_updated_at,
     japan_phone_number: contact.japan_phone_number
